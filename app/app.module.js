@@ -10,20 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var app_routing_1 = require('./app.routing');
 var app_component_1 = require('./app.component');
 var navbar_component_1 = require('./components/navbar/navbar.component');
 var jumbotron_component_1 = require('./components/jumbotron/jumbotron.component');
+var about_component_1 = require('./components/pages/about.component');
+var home_component_1 = require('./components/pages/home.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
             declarations: [
                 app_component_1.AppComponent,
                 navbar_component_1.NavbarComponent,
-                jumbotron_component_1.JumbotronComponent
+                jumbotron_component_1.JumbotronComponent,
+                home_component_1.HomeComponent,
+                about_component_1.AboutComponent
             ],
+            providers: [app_routing_1.appRoutingProviders],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
